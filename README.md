@@ -26,6 +26,26 @@ In this project (*which is just a [mern-starter](http://mern.io/documentation.ht
 
 To show us your skills you can choose to build one of theses 2 features:
 
-### 1 - Add geolocation to a blog post
+### 1 - Add geolocation to post creation and display it on post element (Full-stack)
 
-### 2 - Add a markdown rich text editor to post edition
+The need is to be able to attach a geolocation by entering an address in the `PostCreatWidget`,
+ to persit it in the `post.js` mongoose model, and then to display it using the `PostListItem.js`
+
+For the geocoding you can use the api you want (like [nominatim](https://wiki.openstreetmap.org/wiki/Nominatim) for [openstreetmap](https://www.openstreetmap.org/#map=5/46.449/2.210) 
+or [google maps](https://developers.google.com/maps/documentation/geocoding/start)).
+
+It would be perfect if we can store at least one gps location and one address in database by post.
+
+You can maybe use the [MongoDB geospatial api](https://docs.mongodb.com/manual/geospatial-queries/) to format your data
+
+### 2 - Add a markdown rich text editor to post creation (Front-end)
+
+You can write markdown manually when creating a post.
+
+To render markdown content we use `ReactMarkdown` in the `PostListItem`.
+
+The purpose here is to have a rich text editor doing this stuff when creating a post.
+
+You can use any npm package you want (like [react-mde](https://github.com/andrerpena/react-mde))
+
+Good luck :)
