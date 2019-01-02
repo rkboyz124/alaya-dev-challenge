@@ -22,14 +22,14 @@ We use babel to transpile code in both server and client with `stage-0` plugin. 
 
 ## Show us your skills :)
 
-In this project (*which is just a [mern-starter](http://mern.io/documentation.html)*) project you can write and edit post blog.
+In this project (*which is just a [mern-starter](http://mern.io/documentation.html)*) you can write and edit post blog.
 
 To show us your skills you can choose to build one of theses 2 features:
 
 ### 1 - Add geolocation to post creation and display it on post element (Full-stack)
 
-The need is to be able to attach a geolocation by entering an address in the `PostCreatWidget`,
- to persit it in the `post.js` mongoose model, and then to display it using the `PostListItem.js`
+The purpose is to be able to attach a geolocation by entering an address in the `PostCreatWidget`,
+ to persit it in the `post.js` mongoose model and then to display it using the `PostListItem.js`
 
 For the geocoding you can use the api you want (like [nominatim](https://wiki.openstreetmap.org/wiki/Nominatim) for [openstreetmap](https://www.openstreetmap.org/#map=5/46.449/2.210) 
 or [google maps](https://developers.google.com/maps/documentation/geocoding/start)).
