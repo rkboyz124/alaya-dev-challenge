@@ -24,7 +24,7 @@ We use babel to transpile code in both server and client with `stage-0` plugin. 
 
 In this project (*which is just a [mern-starter](http://mern.io/documentation.html)*) you can write and edit post blog.
 
-To show us your skills you can choose to build one of theses 2 features:
+To show us your skills we would like you to build at least one of theses 2 features:
 
 ### 1 - Add geolocation to post creation and display it on post element (Full-stack)
 
