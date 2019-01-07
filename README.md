@@ -44,8 +44,8 @@ You can write markdown manually when creating a post.
 
 To render markdown content we use `ReactMarkdown` in the `PostListItem`.
 
-The purpose here is to have a rich text editor doing this stuff when creating a post.
+The purpose here is to have a wysiwyg rich text editor component with a material-ui style doing this stuff when creating a post.
 
-You can use any npm package you want (like [react-mde](https://github.com/andrerpena/react-mde))
+You can use any npm package you want (like [slatejs](https://www.slatejs.org/#/rich-text) or maybe [react-mde](https://github.com/andrerpena/react-mde))
 
 Good luck :)
