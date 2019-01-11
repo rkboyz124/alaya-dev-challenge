@@ -1,0 +1,5 @@
+div.react-mde>div.mde-header>div.mde-tabs>button.selected {
+  padding: 4px;
+  border-radius: 12px;
+  background-color: #d2cdcd;
+}

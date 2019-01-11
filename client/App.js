@@ -12,6 +12,7 @@ import routes from './routes';
 
 // Base stylesheet
 require('./main.css');
+require('../node_modules/react-mde/lib/styles/css/react-mde-all.css');
 
 export default function App(props) {
   return (

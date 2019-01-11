@@ -25,7 +25,11 @@ export function getPosts(req, res) {
  * @returns void
  */
 export function addPost(req, res) {
-  if (!req.body.post.name || !req.body.post.title || !req.body.post.content) {
+  if (!req.body.post.name ||
+    !req.body.post.title ||
+    !req.body.post.content ||
+    !req.body.post.location
+    ) {
     res.status(403).end();
   }
 
@@ -35,6 +39,8 @@ export function addPost(req, res) {
   newPost.title = sanitizeHtml(newPost.title);
   newPost.name = sanitizeHtml(newPost.name);
   newPost.content = sanitizeHtml(newPost.content);
+  newPost.address = sanitizeHtml(newPost.address);
+  newPost.location = newPost.location;
 
   newPost.slug = slug(newPost.title.toLowerCase(), { lowercase: true });
   newPost.cuid = cuid();
