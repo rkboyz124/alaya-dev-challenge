@@ -3,6 +3,7 @@ import test from 'ava';
 import sinon from 'sinon';
 import { FormattedMessage } from 'react-intl';
 import { PostCreateWidget } from '../../components/PostCreateWidget/PostCreateWidget';
+import PostContentEditor from '../../components/PostCreateWidget/PostContentEditor';
 import { mountWithIntl, shallowWithIntl } from '../../../../util/react-intl-test-helper';
 
 const props = {
@@ -19,7 +20,7 @@ test('renders properly', t => {
   t.truthy(wrapper.hasClass('appear'));
   t.truthy(wrapper.find('h2').first().containsMatchingElement(<FormattedMessage id="createNewPost" />));
   t.is(wrapper.find('input').length, 2);
-  t.is(wrapper.find('textarea').length, 1);
+  t.truthy(wrapper.containsMatchingElement(<PostContentEditor />));
 });
 
 test('hide when showAddPost is false', t => {
@@ -48,7 +49,7 @@ test('calls addPost', t => {
 
   wrapper.ref('name').value = 'David';
   wrapper.ref('title').value = 'Some Title';
-  wrapper.ref('content').value = 'Bla Bla Bla';
+  wrapper.instance().editorRef.handleValueChange('Bla Bla Bla');
 
   wrapper.find('a').first().simulate('click');
   t.truthy(addPost.calledOnce);
